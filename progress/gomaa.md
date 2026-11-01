@@ -6,6 +6,8 @@
   - `metrics_table()`: one row per run.
   - Graphs: `plot_history` (accuracy / loss per epoch), `plot_confusion_matrices`, `plot_accuracy_ci`, `plot_roc_curves`.
 - Tested on the four result files: the table and all four graphs render correctly.
+- `report/part2_classifier.md`: Part 2 write-up (setup, both experiments, metrics, table + 4 figures, discussion). All numbers checked against `results/*.json`.
+- Figures for the report, made with `save_to`: `report/img/part2_history.png`, `part2_confusion.png`, `part2_accuracy_ci.png`, `part2_roc.png`.
 
 | Run | Test acc | ± 95% CI | Precision | Recall | Specificity | F1 | ROC-AUC | FP (cat→dog) | FN (dog→cat) |
 |---|---|---|---|---|---|---|---|---|---|
@@ -28,12 +30,12 @@
 - A possible extra reason for test acc > train acc: `model.train()` keeps updating the BatchNorm statistics of the frozen backbone, so the backbone's features shift during training and train acc is measured in train mode.
 
 ## Next steps
-- Write `report/part2_classifier.md`.
-- Save the Part 2 figures for the report with `save_to`, once the folder is agreed (see questions).
+- If the experiments are re-run, regenerate the table and figures from the new JSON and update the numbers in the report.
+- Read the final PDF draft and check the Part 2 section.
 
 ## Blockers / questions for the team
 - Ahmed (AhmedWilly): please add the notebook code below and re-run.
-- Ahmed Abdelrazek (AhmedElngar): can the Part 2 figures go into `report/img/` as `part2_*.png`? The folder is yours.
+- Ahmed Abdelrazek (AhmedElngar): `report/part2_classifier.md` is ready for the final PDF. Its figures are in `report/img/` as `part2_*.png`; the folder is yours, so tell me if you want them somewhere else.
 
 ## Code for the notebook (for Ahmed – AhmedWilly)
 Based on the notebook in commit `2cd3b51`. Nothing else in the notebook needs to change.

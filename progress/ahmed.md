@@ -15,6 +15,12 @@
 
 Baseline cell (80/20, Adam, 1 epoch): train acc 0.943, test acc 0.984.
 
+- Added Mohamed Gomaa's code to the notebook (TODO 5 and 6): `metrics_utils` import, train/test metrics printed after
+  the baseline training and evaluation, and the "Metrics table and graphs" cell (table + 4 graphs from `results/*.json`).
+- Re-ran the notebook top to bottom on the GPU, skipping the experiments cell (its outputs are from the original run),
+  so `results/*.json` are unchanged and the table matches `report/part2_classifier.md`.
+  Baseline: Train — acc 0.943, F1 0.943 | Test — acc 0.984, precision 0.985, recall 0.982, F1 0.984, ROC-AUC 0.998.
+
 ## Decisions
 - Same seed for every run → same split and same initial weights, so only split size / optimizer differ.
 - SGD uses momentum 0.9 (plain SGD at lr 1e-3 would be much slower to converge).
@@ -26,8 +32,9 @@ Baseline cell (80/20, Adam, 1 epoch): train acc 0.943, test acc 0.984.
 - Test accuracy > train accuracy: train acc is averaged while the model is still learning during the epoch, test acc is measured after the epoch.
 
 ## Next steps
-- Add Mohamed Gomaa's metrics/table/graphs code to the notebook (TODO 5 and 6) and re-run.
-- Optional: a third split (90/10) or third optimizer (RMSprop).
+- Export the notebook with outputs to PDF for the report appendix and send it to Ahmed Abdelrazek.
+- Send my matriculation number to Ahmed Abdelrazek for the front page; review the final PDF draft.
+- Optional: a third split (90/10) or third optimizer (RMSprop) – only if there is time, and then Mohamed Gomaa must regenerate the table and figures.
 
 ## Blockers / questions for the team
-- Mohamed Gomaa needs the dataset zip (Google Drive) to run the notebook locally – not needed for `metrics_utils.py`, which only reads `results/*.json`.
+- None. Part 2 (notebook + `report/part2_classifier.md`) is complete; Ahmed Abdelrazek can start Part 1, the final PDF and the slides.

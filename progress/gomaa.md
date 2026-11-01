@@ -36,6 +36,29 @@
 ## Blockers / questions for the team
 - Ahmed (AhmedWilly): please add the notebook code below and re-run.
 - Ahmed Abdelrazek (AhmedElngar): `report/part2_classifier.md` is ready for the final PDF. Its figures are in `report/img/` as `part2_*.png`; the folder is yours, so tell me if you want them somewhere else.
+- Everyone: see "Notes for the team" below for the submission checklist and the slide plan from the course slides.
+
+## Notes for the team (from the course slides)
+From `01 Intro` and the Case 1 intro slides on Moodle:
+- Reports are not graded, only checked for completeness. The bonus (one grade step on the passed exam) needs all 5 cases submitted on time and presenting at least once. Missing one submission loses it.
+- The group presents, not individuals, so each of us should be able to explain every part. The exam will most likely be oral.
+- Code of conduct: "Please do not distribute the material provided to you in this course."
+
+**Case 1 checklist – one PDF on Moodle by Mon 02.11 23:59**
+- [ ] Front page: "Case 1: Machine Learning Applications", course name, WiSe 2026/27, Prof. Janiesch, all 3 names + matriculation numbers
+- [ ] Part 1, one heading per task: A1, A2 (+ screenshot of the best boundary and which visual aspects show its quality), B1, B2 (+ screenshot of setup and result)
+- [x] Part 2: `report/part2_classifier.md` with `report/img/part2_*.png` (has its own references)
+- [ ] Appendix: the completed notebook exported to PDF, which shows the TODOs are done, since we hand in only one PDF
+- [ ] Agree who uploads to Moodle, and upload early
+
+**Slides for Tue 03.11** (about 5, "using the guiding questions"):
+1. Title and team
+2. Part 1, A1/A2: linear boundary vs. hidden layer, smallest neuron count that still works
+3. Part 1, B1/B2: learning rate 0.003 vs 1.0, L2 at 30 % noise
+4. Part 2: setup, Table 1 and one figure (confusion matrices or accuracy with CI)
+5. Why the results differ, plus the link to Case 2 (wolf vs husky, explainable AI)
+
+**Next cases:** turn this repo into a template (Settings → General → Template repository) and create `enterprise-computing-case2` from it, so every case starts with the same structure.
 
 ## Code for the notebook (for Ahmed – AhmedWilly)
 Based on the notebook in commit `2cd3b51`. Nothing else in the notebook needs to change.

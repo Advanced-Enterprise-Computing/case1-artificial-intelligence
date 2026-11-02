@@ -1,0 +1,14 @@
+{
+  "title": "Case 1: Artificial Intelligence",
+  "subtitle": "Machine Learning Applications",
+  "members": [
+    ["Mohamed Gomaa", "000000", "mohamed.gomaa@tu-dortmund.de"],
+    ["Ahmed Farag", "000000", "ahmed.farag@tu-dortmund.de"],
+    ["Ahmed Abdelrazek", "000000", "ahmed.abdelrazek@tu-dortmund.de"]
+  ],
+  "course": "Advanced Enterprise Computing: Management of AI",
+  "term": "WS 26/27",
+  "lecturer": "Prof. Dr. Christian Janiesch",
+  "instructor": "Seyyid Ahmed Ciftci",
+  "repo": "https://github.com/Advanced-Enterprise-Computing/case1-artificial-intelligence"
+}

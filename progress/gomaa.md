@@ -8,6 +8,17 @@
 - Tested on the four result files: the table and all four graphs render correctly.
 - `report/part2_classifier.md`: Part 2 write-up (setup, both experiments, metrics, table + 4 figures, discussion). All numbers checked against `results/*.json`.
 - Figures for the report, made with `save_to`: `report/img/part2_history.png`, `part2_confusion.png`, `part2_accuracy_ci.png`, `part2_roc.png`.
+- Part 1 (TensorFlow Playground), together with Ahmed Abdelrazek:
+  - Ran A1, A2, B1 and B2 with a fixed seed, stopping every run at an exact epoch, and repeated the key runs with two more seeds.
+  - Rendered the six figures at 2x (`report/img/part1_*.png`).
+  - Abdelrazek added them and the text in `c4a533f`.
+- Final report PDF (26 pages): front page, clickable contents and list of figures, Part 1, Part 2, one reference list and the notebook as an appendix.
+  - The front page has the team's matriculation numbers and emails and a link to this repository.
+  - Submitted to Moodle on 02.11.2026. `report/final/Case1_Artificial_Intelligence.pdf` is the same file.
+- Both report texts now match the submitted PDF:
+  - citations of the lecture (Janiesch, 2025), the Case 1 slides (Ciftci, 2026), Goodfellow et al. (2016), Hornik et al. (1989) and Kingma & Ba (2015)
+  - American spelling throughout
+- `tools/report_pdf/`: the scripts that build the PDF from this repo (macOS), with a README.
 
 | Run | Test acc | ± 95% CI | Precision | Recall | Specificity | F1 | ROC-AUC | FP (cat→dog) | FN (dog→cat) |
 |---|---|---|---|---|---|---|---|---|---|
@@ -30,13 +41,12 @@
 - A possible extra reason for test acc > train acc: `model.train()` keeps updating the BatchNorm statistics of the frozen backbone, so the backbone's features shift during training and train acc is measured in train mode.
 
 ## Next steps
-- If the experiments are re-run, regenerate the table and figures from the new JSON and update the numbers in the report.
-- Read the final PDF draft and check the Part 2 section.
+- Discussion on Tue 03.11 with Abdelrazek's five slides. Each of us should be able to explain every part.
+- Go through `src/metrics_utils.py` once more before the discussion.
+- Case 2 (Explainable AI) starts on 03.11. Create its repo from this one as a template.
 
 ## Blockers / questions for the team
-- Ahmed (AhmedWilly): please add the notebook code below and re-run.
-- Ahmed Abdelrazek (AhmedElngar): `report/part2_classifier.md` is ready for the final PDF. Its figures are in `report/img/` as `part2_*.png`; the folder is yours, so tell me if you want them somewhere else.
-- Everyone: see "Notes for the team" below for the submission checklist and the slide plan from the course slides.
+- None. Ahmed Abdelrazek: please put the five slides in `slides/`.
 
 ## Notes for the team (from the course slides)
 From `01 Intro` and the Case 1 intro slides on Moodle:
@@ -45,11 +55,11 @@ From `01 Intro` and the Case 1 intro slides on Moodle:
 - Code of conduct: "Please do not distribute the material provided to you in this course."
 
 **Case 1 checklist – one PDF on Moodle by Mon 02.11 23:59**
-- [ ] Front page: "Case 1: Machine Learning Applications", course name, WiSe 2026/27, Prof. Janiesch, all 3 names + matriculation numbers
-- [ ] Part 1, one heading per task: A1, A2 (+ screenshot of the best boundary and which visual aspects show its quality), B1, B2 (+ screenshot of setup and result)
-- [x] Part 2: `report/part2_classifier.md` with `report/img/part2_*.png` (has its own references)
-- [ ] Appendix: the completed notebook exported to PDF, which shows the TODOs are done, since we hand in only one PDF
-- [ ] Agree who uploads to Moodle, and upload early
+- [x] Front page: "Case 1: Artificial Intelligence", course name, WS 26/27, Prof. Janiesch and Seyyid Ahmed Ciftci, all 3 names + matriculation numbers
+- [x] Part 1, one heading per task: A1, A2 (+ screenshot of the best boundary and which visual aspects show its quality), B1, B2 (+ screenshot of setup and result)
+- [x] Part 2: `report/part2_classifier.md` with `report/img/part2_*.png`
+- [x] Appendix: the completed notebook, rendered into the same PDF, which shows the TODOs are done
+- [x] Uploaded to Moodle by Mohamed Gomaa on 02.11
 
 **Slides for Tue 03.11** (about 5, "using the guiding questions"):
 1. Title and team
@@ -61,7 +71,7 @@ From `01 Intro` and the Case 1 intro slides on Moodle:
 **Next cases:** turn this repo into a template (Settings → General → Template repository) and create `enterprise-computing-case2` from it, so every case starts with the same structure.
 
 ## Code for the notebook (for Ahmed – AhmedWilly)
-Based on the notebook in commit `2cd3b51`. Nothing else in the notebook needs to change.
+Done: Ahmed added this code in `70671e4`. Based on the notebook in commit `2cd3b51`. Nothing else in the notebook needs to change.
 
 **1. Setup cell** – add at the end:
 ```python

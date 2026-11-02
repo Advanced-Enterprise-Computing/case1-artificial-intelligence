@@ -1,11 +1,11 @@
-# Case 1 – Machine Learning Applications
+# Case 1 – Artificial Intelligence: Machine Learning Applications
 
-IT Management, TU Dortmund, Winter Term 2026/27. See `assignment.pdf` for the task and `PROJECT.md` for roles and conventions.
+Advanced Enterprise Computing: Management of AI, TU Dortmund, WS 2026/27. See `assignment.pdf` for the task and `PROJECT.md` for roles and conventions. The submitted report is in `report/final/`.
 
 ## Setup
 ```bash
-git clone https://github.com/Advanced-Enterprise-Computing/enterprise-computing-case1.git
-cd enterprise-computing-case1
+git clone https://github.com/Advanced-Enterprise-Computing/case1-artificial-intelligence.git
+cd case1-artificial-intelligence
 python -m venv .venv
 # Windows: .venv\Scripts\activate    macOS/Linux: source .venv/bin/activate
 pip install torch torchvision --index-url https://download.pytorch.org/whl/cu126   # NVIDIA GPU; CPU only: pip install torch torchvision
@@ -20,5 +20,7 @@ Then put the dataset at `data/1_Case_AEC/Cat` and `data/1_Case_AEC/Dog` (not in 
 | `src/metrics_utils.py` | Metrics, table and plots |
 | `results/` | One JSON per experiment |
 | `report/` | Report sections + screenshots |
+| `report/final/` | Submitted report (PDF) |
+| `tools/report_pdf/` | Scripts that build the report PDF |
 | `slides/` | Discussion slides |
 | `progress/` | Per-person handoff notes |
